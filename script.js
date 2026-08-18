@@ -1,188 +1,125 @@
-/* ==========================
-   Study Schedule
-========================== */
+let selectedPackage = "";
 
-document.addEventListener("DOMContentLoaded", () => {
+// اختيار الباقة
+const packageButtons = document.querySelectorAll(".package-btn");
 
-const cards = document.querySelectorAll(".day-card");
-const hero = document.querySelector(".hero");
-const quote = document.querySelector(".quote-box");
+packageButtons.forEach(button => {
 
-/* ==========================
-   Fade Animation
-========================== */
+    button.addEventListener("click", () => {
 
-const observer = new IntersectionObserver((entries)=>{
+        packageButtons.forEach(btn => {
+            btn.classList.remove("active");
+        });
 
-entries.forEach(entry=>{
+        button.classList.add("active");
 
-if(entry.isIntersecting){
+        selectedPackage = button.dataset.name;
 
-entry.target.classList.add("show");
-
-}
+    });
 
 });
 
-},{
-threshold:0.15
-});
+// زر الشحن
+document.getElementById("buyDiamonds").addEventListener("click", () => {
 
-cards.forEach(card=>observer.observe(card));
+    const playerId = document.querySelector("input").value.trim();
 
-if(hero) observer.observe(hero);
+    if (playerId === "") {
+        alert("أدخل معرف اللاعب أولاً");
+        return;
+    }
 
-if(quote) observer.observe(quote);
+    if (selectedPackage === "") {
+        alert("اختر الباقة أولاً");
+        return;
+    }
 
-/* ==========================
- Card Hover Effect
-========================== */
+    document.getElementById("playerID").textContent =
+        `${playerId} | ${selectedPackage}`;
 
-cards.forEach(card=>{
+    const modal = new bootstrap.Modal(
+        document.getElementById("successModal")
+    );
 
-card.addEventListener("mousemove",(e)=>{
+    modal.show();
 
-const rect = card.getBoundingClientRect();
+});let selectedMember = "";
 
-const x = e.clientX - rect.left;
-const y = e.clientY - rect.top;
+const memberButtons = document.querySelectorAll(".member-btn");
 
-const centerX = rect.width/2;
-const centerY = rect.height/2;
+memberButtons.forEach(button => {
 
-const rotateY = (x-centerX)/18;
-const rotateX = -(y-centerY)/18;
+    button.addEventListener("click", () => {
 
-card.style.transform =
-`perspective(900px)
-rotateX(${rotateX}deg)
-rotateY(${rotateY}deg)
-translateY(-8px)`;
+        memberButtons.forEach(btn => {
+            btn.classList.remove("active");
+        });
 
-});
+        button.classList.add("active");
 
-card.addEventListener("mouseleave",()=>{
+        selectedMember = button.dataset.name;
 
-card.style.transform="";
-
-});
-
-});
-
-/* ==========================
- Hero Float
-========================== */
-
-let angle = 0;
-
-setInterval(()=>{
-
-angle+=0.03;
-
-if(hero){
-
-hero.style.transform =
-`translateY(${Math.sin(angle)*4}px)`;
-
-}
-
-},25);
-
-/* ==========================
- Current Day Highlight
-========================== */
-
-const days=[
-"sunday",
-"monday",
-"tuesday",
-"wednesday",
-"thursday",
-"friday",
-"saturday"
-];
-
-const today=days[new Date().getDay()];
-
-const active=document.querySelector(`.${today}`);
-
-if(active){
-
-active.style.boxShadow="0 0 25px rgba(126,47,208,.35)";
-
-active.style.transform="scale(1.02)";
-
-}
-
-/* ==========================
- Smooth Buttons
-========================== */
-
-document.querySelectorAll("button,a").forEach(el=>{
-
-el.addEventListener("click",()=>{
-
-el.style.transform="scale(.95)";
-
-setTimeout(()=>{
-
-el.style.transform="";
-
-},120);
+    });
 
 });
 
-});
+document.getElementById("buyMember").addEventListener("click", () => {
+
+    const playerId = document.querySelector("input").value.trim();
+
+    if (playerId === "") {
+        alert("أدخل معرف اللاعب أولاً");
+        return;
+    }
+
+    if (selectedMember === "") {
+        alert("اختر العضوية أولاً");
+        return;
+    }
+
+    document.getElementById("playerID").textContent =
+        `${playerId} | ${selectedMember}`;
+
+    const modal = new bootstrap.Modal(
+        document.getElementById("successModal")
+    );
+
+    modal.show();
 
 });
+let selectedBooyah = "";
 
-/* ==========================
- Scroll Animation
-========================== */
+const booyahBtn = document.querySelector(".booyah-btn");
 
-window.addEventListener("scroll",()=>{
+booyahBtn.addEventListener("click", () => {
 
-const scrolled=window.pageYOffset;
+    booyahBtn.classList.toggle("active");
 
-document.querySelectorAll(".blur").forEach((item,index)=>{
-
-const speed=(index+1)*0.15;
-
-item.style.transform=
-`translateY(${scrolled*speed}px)`;
+    selectedBooyah = booyahBtn.classList.contains("active")
+        ? booyahBtn.dataset.name
+        : "";
 
 });
 
+document.getElementById("buyBooyah").addEventListener("click", () => {
+
+    const playerId = document.querySelector("input").value.trim();
+
+    if (playerId === "") {
+        alert("أدخل معرف اللاعب أولاً");
+        return;
+    }
+
+    if (selectedBooyah === "") {
+        alert("اختر Booyah Pass أولاً");
+        return;
+    }
+
+    document.getElementById("playerID").textContent =
+        `${playerId} | ${selectedBooyah}`;
+
+    new bootstrap.Modal(
+        document.getElementById("successModal")
+    ).show();
+
 });
-
-/* ==========================
- Add Show Class
-========================== */
-
-const style=document.createElement("style");
-
-style.innerHTML=`
-
-.hero,
-.day-card,
-.quote-box{
-
-opacity:0;
-
-transform:translateY(40px);
-
-transition:1s;
-
-}
-
-.show{
-
-opacity:1 !important;
-
-transform:translateY(0) !important;
-
-}
-
-`;
-
-document.head.appendChild(style);

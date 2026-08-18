@@ -2,508 +2,430 @@
 <html lang="ar" dir="rtl">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Study Schedule</title>
+<title>Game Top Up</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
 <body>
 
-<div class="background">
+<!-- Header -->
 
-<div class="blur b1"></div>
-<div class="blur b2"></div>
-<div class="blur b3"></div>
+<nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold text-danger fs-3">
+
+GAME TOP UP
+
+</a>
+
+<div class="d-flex align-items-center gap-3">
+
+<select class="form-select">
+
+<option>العربية</option>
+
+<option>English</option>
+
+</select>
+
+<i class="fa-solid fa-circle-user fs-2 text-secondary"></i>
 
 </div>
 
-<header class="hero">
-
-<div class="emoji">
-🦄 ✨ 🌸
 </div>
+
+</nav>
+
+<!-- Banner -->
+
+<div class="container mt-4">
+
+<div class="banner">
+
+<div class="row align-items-center">
+
+<div class="col-md-6">
 
 <h1>
-جدول مواعيد الدروس الأسبوعي
+
+اشحن ألعابك في ثوانٍ
+
 </h1>
 
 <p>
-بحبك يا امونتي 
+
+منصة شحن ألعاب بتصميم احترافي
+
 </p>
 
-<div class="teacher-card">
+<button class="btn btn-light btn-lg">
 
-<div class="teacher-icon">
-💜
-</div>
+ابدأ الآن
 
-<div>
-
-<h3>Omnia Elhadary</h3>
-
-<span>قطتي </span>
+</button>
 
 </div>
 
+<div class="col-md-6 text-center">
+
+
+
 </div>
 
-<div class="welcome">
-
-💕 بحبك يا قطتي و انشالله تجيبي 101%
 </div>
 
-</header>
+</div>
 
-<section class="table-section">
+</div>
 
-<div class="section-title">
+<!-- الألعاب -->
 
-<i class="fa-solid fa-calendar-days"></i>
+<div class="container mt-5">
+
+<h2 class="section-title">
+
+اختر اللعبة
+
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+
+<div class="game-card active">
+
+
+
+<h4>
+
+Free Fire
+
+</h4>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="game-card">
+
+
+<h4>
+
+Delta Force
+
+</h4>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- تسجيل الدخول -->
+
+<div class="container mt-5">
+
+<div class="login-box">
 
 <h2>
 
-الجدول الأسبوعي
+تسجيل الدخول
 
 </h2>
 
-</div>
+<input
 
-<div class="table-wrapper">
+type="number"
 
-<table>
+class="form-control form-control-lg"
 
-<thead>
+placeholder="أدخل معرف اللاعب">
 
-<tr>
+<button
 
-<th>اليوم</th>
+class="btn btn-danger w-100 mt-3">
 
-<th>المادة الأولى</th>
+متابعة
 
-<th>المادة الثانية</th>
+</button>
 
-<th>المادة الثالثة</th>
+<div class="social-login mt-4">
 
-</tr>
+<i class="fab fa-google"></i>
 
-</thead>
+<i class="fab fa-facebook"></i>
 
-<tbody>
+<i class="fab fa-apple"></i>
 
-<tr>
-
-<td class="day saturday">
-
-السبت
-
-</td>
-
-<td>
-
-📐 رياضيات
-
-<br>
-
-<span>02:00 PM</span>
-
-</td>
-
-<td>
-
-📖 تاريخ
-
-<br>
-
-<span>05:00 PM</span>
-
-</td>
-
-<td>
-
-ــــ
-
-</td>
-
-</tr>
-
-<tr>
-
-<td class="day sunday">
-
-الأحد
-
-</td>
-
-<td>
-
-🧪 علوم
-
-<br>
-
-<span>02:00 PM</span>
-
-</td>
-
-<td>
-
-🇮🇹 إيطالي
-
-<br>
-
-<span>03:30 PM</span>
-
-</td>
-
-<td>
-
-📚 عربي
-
-<br>
-
-<span>05:00 PM</span>
-
-</td>
-
-</tr>
-
-<tr>
-
-<td class="day monday">
-
-الاثنين
-
-</td>
-
-<td>
-
-💻 برمجة
-
-<br>
-
-<span>04:00 PM</span>
-
-</td>
-
-<td>
-
-🇬🇧 إنجليزي
-
-<br>
-
-<span>05:00 PM</span>
-
-</td>
-
-<td>
-
-ــــ
-
-</td>
-
-</tr>
-
-<tr>
-
-<td class="day tuesday">
-
-الثلاثاء
-
-</td>
-
-<td>
-
-📐 رياضيات
-
-<br>
-
-<span>02:00 PM</span>
-
-</td>
-
-<td>
-
-📖 تاريخ
-
-<br>
-
-<span>05:00 PM</span>
-
-</td>
-
-<td>
-
-ــــ
-
-</td>
-
-</tr>
-
-<tr>
-
-<td class="day wednesday">
-
-الأربعاء
-
-</td>
-
-<td>
-
-🧪 علوم
-
-<br>
-
-<span>02:00 PM</span>
-
-</td>
-
-<td>
-
-🇮🇹 إيطالي
-
-<br>
-
-<span>03:30 PM</span>
-
-</td>
-
-<td>
-
-📚 عربي
-
-<br>
-
-<span>05:00 PM</span>
-
-</td>
-
-</tr>
-
-<tr>
-
-<td class="day thursday">
-
-الخميس
-
-</td>
-
-<td>
-
-💻 برمجة
-
-<br>
-
-<span>04:00 PM</span>
-
-</td>
-
-<td>
-
-🇬🇧 إنجليزي
-
-<br>
-
-<span>05:00 PM</span>
-
-</td>
-
-<td>
-
-ــــ
-
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+<i class="fab fa-x-twitter"></i>
 
 </div>
 
-</section>
+</div>
+<!-- اختر الباقة -->
 
-<section class="days-grid">
+</div>
+<div class="container mt-5">
 
-<h2 class="title">
-دروس الأسبوع
+<h2 class="section-title">اختر الباقة</h2>
+
+<div class="row g-3">
+
+<div class="col-6">
+<button class="btn package-btn w-100" data-name="100 Diamonds">
+100 💎
+</button>
+</div>
+
+<div class="col-6">
+<button class="btn package-btn w-100" data-name="310 Diamonds">
+310 💎
+</button>
+</div>
+
+<div class="col-6">
+<button class="btn package-btn w-100" data-name="520 Diamonds">
+520 💎
+</button>
+</div>
+
+<div class="col-6">
+<button class="btn package-btn w-100" data-name="1060 Diamonds">
+1060 💎
+</button>
+</div>
+
+<div class="col-6">
+<button class="btn package-btn w-100" data-name="2180 Diamonds">
+2180 💎
+</button>
+</div>
+
+<div class="col-6">
+<button class="btn package-btn w-100" data-name="5600 Diamonds">
+5600 💎
+</button>
+</div>
+</div>
+
+<div class="text-center mt-4">
+
+<button id="buyDiamonds" class="btn btn-danger btn-lg px-5">
+
+اشحن الآن
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- العضويات -->
+
+<div class="container mt-5">
+
+<h2 class="section-title">العضويات</h2>
+
+<div class="row g-3">
+
+<div class="col-6">
+<button class="btn member-btn w-100" data-name="Weekly Membership">
+Weekly Membership
+<br>
+<span>$1.99</span>
+</button>
+</div>
+
+<div class="col-6">
+<button class="btn member-btn w-100" data-name="Monthly Membership">
+Monthly Membership
+<br>
+<span>$7.99</span>
+</button>
+</div>
+
+</div>
+
+<div class="text-center mt-4">
+
+<button id="buyMember" class="btn btn-warning btn-lg px-5">
+
+شراء العضوية
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Booyah Pass -->
+
+<div class="container mt-5">
+
+<h2 class="section-title">Booyah Pass</h2>
+
+<div class="text-center">
+
+<button class="btn booyah-btn w-100" data-name="Booyah Pass">
+🔥 Booyah Pass
+<br>
+<span>$4.49</span>
+</button>
+
+</div>
+
+<div class="text-center mt-4">
+
+<button id="buyBooyah" class="btn btn-success btn-lg px-5">
+
+شراء Booyah Pass
+
+</button>
+
+</div>
+
+</div>
+
+<!-- نافذة نجاح الشحن -->
+
+<div class="modal fade" id="successModal" tabindex="-1">
+
+<div class="modal-dialog modal-dialog-centered">
+
+<div class="modal-content text-center p-4">
+
+<h2 class="text-success">
+
+✔ تم استلام طلب الشحن
+
 </h2>
 
-<div class="grid"> 
-    <!-- السبت -->
-<div class="day-card saturday">
+<p class="mt-3">
 
-<div class="card-header">
-📐 السبت
-</div>
+تم إرسال طلبك بنجاح، وسيتم تنفيذ عملية الشحن خلال دقائق.
 
-<div class="lesson">
-<span>02:00 PM</span>
-<h4>رياضيات</h4>
-</div>
+</p>
 
-<div class="lesson">
-<span>05:00 PM</span>
-<h4>تاريخ</h4>
-</div>
+<hr>
 
-</div>
+<h5>
 
-<!-- الأحد -->
+تفاصيل الطلب
 
-<div class="day-card sunday">
-
-<div class="card-header">
-🧪 الأحد
-</div>
-
-<div class="lesson">
-<span>02:00 PM</span>
-<h4>علوم متكاملة</h4>
-</div>
-
-<div class="lesson">
-<span>03:30 PM</span>
-<h4>لغة إيطالية</h4>
-</div>
-
-<div class="lesson">
-<span>05:00 PM</span>
-<h4>لغة عربية</h4>
-</div>
-
-</div>
-
-<!-- الاثنين -->
-
-<div class="day-card monday">
-
-<div class="card-header">
-💻 الاثنين
-</div>
-
-<div class="lesson">
-<span>04:00 PM</span>
-<h4>برمجة</h4>
-</div>
-
-<div class="lesson">
-<span>05:00 PM</span>
-<h4>لغة إنجليزية</h4>
-</div>
-
-</div>
-
-<!-- الثلاثاء -->
-
-<div class="day-card tuesday">
-
-<div class="card-header">
-📐 الثلاثاء
-</div>
-
-<div class="lesson">
-<span>02:00 PM</span>
-<h4>رياضيات</h4>
-</div>
-
-<div class="lesson">
-<span>05:00 PM</span>
-<h4>تاريخ</h4>
-</div>
-
-</div>
-
-<!-- الأربعاء -->
-
-<div class="day-card wednesday">
-
-<div class="card-header">
-🧪 الأربعاء
-</div>
-
-<div class="lesson">
-<span>02:00 PM</span>
-<h4>علوم متكاملة</h4>
-</div>
-
-<div class="lesson">
-<span>03:30 PM</span>
-<h4>لغة إيطالية</h4>
-</div>
-
-<div class="lesson">
-<span>05:00 PM</span>
-<h4>لغة عربية</h4>
-</div>
-
-</div>
-
-<!-- الخميس -->
-
-<div class="day-card thursday">
-
-<div class="card-header">
-💻 الخميس
-</div>
-
-<div class="lesson">
-<span>04:00 PM</span>
-<h4>برمجة</h4>
-</div>
-
-<div class="lesson">
-<span>05:00 PM</span>
-<h4>لغة إنجليزية</h4>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="quote">
-
-<div class="quote-box">
-
-<h2>
-✨ بالتوفيق يكوتييي كوتييي✨
-</h2>
+</h5>
 
 <p>
 
-شطوره يخواتي اشطر كتكوته
+اللاعب: <span id="playerID">غير محدد</span>
+
+</p>
+
+<p>
+
+الحالة:
+<span class="badge bg-success">
+
+قيد التنفيذ
+
+</span>
+
+</p>
+
+<button
+class="btn btn-danger mt-3"
+data-bs-dismiss="modal">
+
+إغلاق
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Footer -->
+
+<footer class="mt-5">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-6">
+
+<h3>
+
+GAME TOP UP
+
+</h3>
+
+<p>
+
+أفضل منصة لشحن الألعاب بسرعة وأمان.
 
 </p>
 
 </div>
 
-</section>
+<div class="col-md-6 text-md-end">
 
-<footer>
+<a href="#">
+<i class="fab fa-facebook"></i>
+</a>
 
-<p>
+<a href="#">
+<i class="fab fa-instagram"></i>
+</a>
 
-خلصتي دروسك تعالي كلميني بقا و هديكي بوسهه ❤️
+<a href="#">
+<i class="fab fa-tiktok"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-discord"></i>
+</a>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="text-center mb-0">
+
+© 2026 Game Top Up. All Rights Reserved.
 
 </p>
+
+</div>
 
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
